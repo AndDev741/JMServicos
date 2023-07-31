@@ -18,6 +18,7 @@ import img13 from '../Assets/Projects/img13.jpeg'
 import img14 from '../Assets/Projects/img14.jpeg'
 import img15 from '../Assets/Projects/img15.jpeg'
 import img16 from '../Assets/Projects/img16.jpeg'
+import slide6 from '../Assets/Services/slide6.jpeg'
 
 export default function Projects() {
     const [selectedImage, setSelectedImage] = useState(img15)
@@ -49,7 +50,7 @@ export default function Projects() {
                             onClick={() => handleImage(img15, 1)}>Instalação de sistemas elétricos</li>
                             <li className={`text-3xl list-disc my-8 cursor-pointer 
                             ${selectedItem === 2 ? 'text-yellow-400' : ''}`}
-                            onClick={() => handleImage(img2, 2)}>Manutenção elétrica preventiva</li>
+                            onClick={() => handleImage(slide6, 2)}>Manutenção elétrica preventiva</li>
                             <li className={`text-3xl list-disc my-8 cursor-pointer 
                             ${selectedItem === 3 ? 'text-yellow-400' : ''}`}
                             onClick={() => handleImage(img1, 3)}>Reparos elétricos</li>

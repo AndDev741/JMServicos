@@ -4,8 +4,8 @@ export default function Footer(){
         <>
             <div className="flex items-center justify-evenly font-pFont bg-[#463A3A] h-[20vh]">
                 <div className='flex flex-col items-center'>
-                    <p className='text-center text-white'>Meu email: jmservicos1617@gmail.com</p>
-                    <p className='text-center text-white'>Meu número: 62994246306</p>
+                    <p className='text-center text-white'>Nosso email: jmservicos1617@gmail.com</p>
+                    <p className='text-center text-white'>Nosso número: 62994246306</p>
                 </div>
                 <div className="flex flex-col items-center">
                     <h2 className="text-center text-white">Sigam-nos no Instagram</h2>

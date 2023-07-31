@@ -1,13 +1,26 @@
 import { Element } from "react-scroll"
 import { Map, Marker, ZoomControl} from "pigeon-maps"
+import {useForm, ValidationError} from '@formspree/react'
+import { useState } from "react"
 export default function Contact() {
+    const [state, handleSubmit] = useForm('xvojgyww');
+    const [formSubmited, setFormSubmited] = useState(false);
+    if(state.succeeded && !formSubmited){
+        window.alert('O seu email foi enviado com sucesso! Em breve retornaremos.')
+        setFormSubmited(true)
+    }
+
+    const handleFormReset = () => {
+        setFormSubmited(false)
+    }
+
     return(
     <Element name="contact">
     <div className="relative h-[100vh]">
         <div className="absolute inset-0 bg-[url('./Assets/contactbg.png')] bg-cover h-[100vh] filter brightness-50"></div>
         <div className="flex items-center justify-evenly h-[100vh] filter brightness-100">
             <div className="">
-                <h1 className="text-white font-[600] mb-6 text-4xl text-center">Entre em contato conosco</h1>
+                <h2 className="text-white font-[600] mb-6 text-4xl text-center">Entre em contato conosco</h2>
                 <Map height={400} width={700} defaultCenter={[-16.681808, -49.275472]} defaultZoom={12} metaWheelZoom={true}>
                     <Marker width={50} anchor={[-16.681808, -49.275472]} />
                     <ZoomControl />
@@ -15,39 +28,85 @@ export default function Contact() {
                 <h2 className="text-white mb-6 text-3xl text-center">Atendemos em toda Goiânia e região <br /> metropolitana</h2>
             </div>
             <div>
-                <form className="w-[500px] h-[520px] rounded-[12px] bg-white mt-12">
+                <form onSubmit={(e) => {
+                    handleSubmit(e);
+                    handleFormReset();
+                }}
+                      className="w-[500px] h-[520px] rounded-[12px] bg-white mt-12">
                     <div className="flex justify-end">
                         <h2 className="font-pFont font-[600] text-[24px] m-3 mr-8">Nos mande um email</h2>
                     </div>
                     <div className="font-pFont my-6">
-                        <label className="text-[18px] ml-[30px]">Nome:</label>
+                        <label 
+                        htmlFor="name" 
+                        className="text-[18px] ml-[30px]">
+                        Nome:</label>
                         <br />
-                        <input className="border-b-2 border-solid border-black w-[420px] mx-[30px]" 
+                        <input 
+                        name="name"
+                        className="border-b-2 border-solid border-black w-[420px] mx-[30px]" 
                         type='text' required
                         />
+                        <ValidationError
+                        prefix="email"
+                        field="email"
+                        errors={state.errors} />
                     </div>
                     <div className="font-pFont my-6">
-                        <label className="text-[18px] ml-[30px]">Email:</label>
+                        <label
+                        htmlFor="email" 
+                        className="text-[18px] ml-[30px]">Email:</label>
                         <br />
-                        <input className="border-b-2 border-solid border-black w-[420px] mx-[30px]" 
+                        <input 
+                        name="email"
+                        className="border-b-2 border-solid border-black w-[420px] mx-[30px]" 
                         type='email' required
                         />
+                        <ValidationError
+                        prefix="name"
+                        field="name"
+                        errors={state.errors} />
                     </div>
                     <div className="font-pFont my-6">
-                        <label className="text-[18px] ml-[30px]">Celular:</label>
+                        <label 
+                        htmlFor="number"
+                        className="text-[18px] ml-[30px]">Celular:</label>
                         <br />
-                        <input className="border-b-2 border-solid border-black w-[420px] mx-[30px]" 
+                        <input 
+                        name="number"
+                        className="border-b-2 border-solid border-black w-[420px] mx-[30px]" 
                         type='text' required
                         />
+                        <ValidationError
+                        prefix="number"
+                        field="number"
+                        errors={state.errors} />
                     </div>
                     <div className="font-pFont my-6">
-                        <label className="text-[18px] ml-[30px]">Sua mensagem:</label>
+                        <label
+                        htmlFor="message" 
+                        className="text-[18px] ml-[30px]">
+                        Sua mensagem:</label>
                         <br />
                         <div className="flex items-center">
-                            <textarea className="border-2 border-solid border-black w-[300px] max-w-[360px] h-[160px] max-h-[160px] ml-[30px]" 
+                            <textarea
+                            name="message"
+                            className="border-2 border-solid border-black w-[300px] max-w-[360px] h-[160px] max-h-[160px] ml-[30px]" 
                             type='text' required
                             />
-                            <button type="submit" className="bg-black text-white w-[150px] h-[50px] ml-[10px]">Enviar</button>
+                            <ValidationError
+                            prefix="message"
+                            field="message"
+                            errors={state.errors} />
+                            <button
+                            disabled={state.submitting}
+                            type="submit" 
+                            className="bg-black text-white w-[150px] h-[50px] ml-[10px]">Enviar</button>
+                            {formSubmited && (
+                                <div className="text-[18px] ml-[30px] text-green-500">
+                                    O Email foi enviado com sucesso! 
+                                </div>
+                            )}
                         </div>
                     </div>
                 </form>

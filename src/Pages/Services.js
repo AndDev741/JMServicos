@@ -1,10 +1,16 @@
 import { useState, useEffect } from "react"
 import { Element } from "react-scroll"
 import ServicesNavigation from "../Elements/ServicesNavigation";
+import ServicesItem from "../Elements/ServicesItem";
 //images
 import slide1 from '../Assets/Services/slide1.png'
 import slide2 from '../Assets/Services/slide2.png'
-import ServicesItem from "../Elements/ServicesItem";
+import slide3 from '../Assets/Services/slide3.jpeg'
+import slide4 from '../Assets/Services/slide4.jpeg'
+import slide8 from '../Assets/Services/slide8.jpeg'
+import iluminação from '../Assets/Projects/img4.jpeg'
+import reparos from '../Assets/Projects/img15.jpeg'
+
 
 
 export default function Services() {
@@ -39,37 +45,37 @@ export default function Services() {
     },
     {
         id: 1,
-        img : slide2,
+        img : iluminação,
         textH: 'Instalação e Iluminação',
         textP: 'Iluminando seus espaços com perfeição. Nossa equipe experiente cuida de todas as etapas para\
                 criar ambientes luminosos e aconchegantes. Deixe-nos tornar sua visão luminosa em realidade!'
     },
     {
         id: 2,
-        img : slide1,
+        img : reparos,
         textH: 'Reparos Elétricos',
         textP: 'Expertise em soluções rápidas e seguras. Sua rede elétrica em boas mãos,\
                 garantindo sua tranquilidade. Conte conosco!'
     },
     {
         id: 3,
-        img : slide2,
+        img : slide8,
         textH: 'Atualização e Modernização',
         textP: 'Renovando sua infraestrutura com tecnologia de ponta. Conte com nossos serviços\
                 especializados para tornar seu sistema elétrico mais eficiente e atualizado.'
     },
     {
         id: 4,
-        img : slide2,
+        img : slide4,
         textH: 'Manutenção elétrica preventiva',
         textP: 'Realizamos inspeções regulares e manutenção preventiva para garantir o\
                 funcionamento seguro e eficiente do sistema elétrico.'
     },
     {
         id: 5,
-        img : slide2,
-        textH: 'Manutenção elétrica preventiva',
-        textP: 'Garanta a tranquilidade do seu lar com nossos serviços de manutenção elétrica. Nossa equipe experiente cuida de todas as necessidades elétricas,\
+        img : slide3,
+        textH: 'Manutenção Elétrica Residencial',
+        textP: 'Nossa equipe experiente cuida de todas as necessidades elétricas,\
                 proporcionando um ambiente seguro e funcional para você e sua família'
     }
 ]
@@ -88,7 +94,8 @@ export default function Services() {
                  key={item.id}
                  content={
                         <div className={`flex flex-col items-center`}>
-                            <img className="filter brightness-100 rounded" src={item.img} alt={`Slide ${index}`} />
+                            <img className="filter brightness-100 rounded w-[433px] h-[262px] border-2 border-solid border-yellow-500"
+                             src={item.img} alt={`Slide ${index}`} />
                             <h2 className="text-[#ffe23b] font-hFont font-[700] text-2xl text-center">{item.textH}</h2>
                             <p className="w-[420px] text-white text-lg text-center">{item.textP}</p>
                         </div>
@@ -96,14 +103,12 @@ export default function Services() {
                  isActive={index === 0}>
                 </ServicesItem>
                 ))}
-                </div>
-                    <div className="flex flex-col mt-[15%]">
-                        <ServicesNavigation
-                            itemCount={slides.length}
-                            currentIndex={currentIndex}
-                            handleClick={handleCircleClick}
-                        />
-                    </div>
+                <ServicesNavigation
+                    itemCount={slides.length}
+                    currentIndex={currentIndex}
+                    handleClick={handleCircleClick}
+                />
+                </div>  
              </div>
             </div>
     </Element>
