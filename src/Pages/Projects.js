@@ -45,19 +45,19 @@ export default function Projects() {
                 <div className="flex flex-col items-center md2:flex-row md2:justify-evenly md2:mt-6">
                     <div>
                         <ul className="font-pFont">
-                            <li className={`text-2xl sm:text-3xl md2:list-disc my-8 cursor-pointer text-center md:2:text-start underline sm:no-underline
+                            <li className={`text-2xl sm:text-3xl md2:list-disc my-8 cursor-pointer text-center md2:text-start underline sm:no-underline
                             ${selectedItem === 1 ? 'text-yellow-400' : ''}`}
                             onClick={() => handleImage(img15, 1)}>Instalação de sistemas elétricos</li>
-                            <li className={`text-2xl sm:text-3xl md2:list-disc my-8 cursor-pointer text-center md:2:text-start underline sm:no-underline
+                            <li className={`text-2xl sm:text-3xl md2:list-disc my-8 cursor-pointer text-center md2:text-start underline sm:no-underline
                             ${selectedItem === 2 ? 'text-yellow-400' : ''}`}
                             onClick={() => handleImage(slide6, 2)}>Manutenção elétrica preventiva</li>
-                            <li className={`text-2xl sm:text-3xl md2:list-disc my-8 cursor-pointer text-center md:2:text-start underline sm:no-underline
+                            <li className={`text-2xl sm:text-3xl md2:list-disc my-8 cursor-pointer text-center md2:text-start  underline sm:no-underline
                             ${selectedItem === 3 ? 'text-yellow-400' : ''}`}
                             onClick={() => handleImage(img1, 3)}>Reparos elétricos</li>
-                            <li className={`text-2xl sm:text-3xl md2:list-disc my-8 cursor-pointer text-center md:2:text-start underline sm:no-underline
+                            <li className={`text-2xl sm:text-3xl md2:list-disc my-8 cursor-pointer text-center md2:text-start underline sm:no-underline
                             ${selectedItem === 4 ? 'text-yellow-400' : ''}`}
                             onClick={() => handleImage(img13, 4)}>Atualização e modernização</li>
-                            <li className={`text-2xl sm:text-3xl md2:list-disc my-8 cursor-pointer text-center md:2:text-start underline sm:no-underline
+                            <li className={`text-2xl sm:text-3xl md2:list-disc my-8 cursor-pointer text-center md2:text-start underline sm:no-underline
                             ${selectedItem === 5 ? 'text-yellow-400' : ''}`}
                             onClick={() => handleImage(img12, 5)}>Instalação de iluminação</li>
                         </ul>
