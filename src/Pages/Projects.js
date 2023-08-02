@@ -38,36 +38,36 @@ export default function Projects() {
     return(
         <>
         <Element name='projects'>
-            <div className="h-[100vh] bg-[#463A3A] text-white">
+            <div className="bg-[#463A3A] text-white">
                 
                 <h1 className="text-center text-[48px] font-hFont font-[900] pt-[4%]">Projetos ja feitos</h1>
                 <p className="text-center text-[20px] text-slate-300 font-pFont ">Clique nos titulos para ver os projetos</p>
-                <div className="flex justify-evenly mt-6">
+                <div className="flex flex-col items-center md2:flex-row md2:justify-evenly md2:mt-6">
                     <div>
                         <ul className="font-pFont">
-                            <li className={`text-3xl list-disc my-8 cursor-pointer 
+                            <li className={`text-2xl sm:text-3xl md2:list-disc my-8 cursor-pointer text-center md:2:text-start underline sm:no-underline
                             ${selectedItem === 1 ? 'text-yellow-400' : ''}`}
                             onClick={() => handleImage(img15, 1)}>Instalação de sistemas elétricos</li>
-                            <li className={`text-3xl list-disc my-8 cursor-pointer 
+                            <li className={`text-2xl sm:text-3xl md2:list-disc my-8 cursor-pointer text-center md:2:text-start underline sm:no-underline
                             ${selectedItem === 2 ? 'text-yellow-400' : ''}`}
                             onClick={() => handleImage(slide6, 2)}>Manutenção elétrica preventiva</li>
-                            <li className={`text-3xl list-disc my-8 cursor-pointer 
+                            <li className={`text-2xl sm:text-3xl md2:list-disc my-8 cursor-pointer text-center md:2:text-start underline sm:no-underline
                             ${selectedItem === 3 ? 'text-yellow-400' : ''}`}
                             onClick={() => handleImage(img1, 3)}>Reparos elétricos</li>
-                            <li className={`text-3xl list-disc my-8 cursor-pointer 
+                            <li className={`text-2xl sm:text-3xl md2:list-disc my-8 cursor-pointer text-center md:2:text-start underline sm:no-underline
                             ${selectedItem === 4 ? 'text-yellow-400' : ''}`}
                             onClick={() => handleImage(img13, 4)}>Atualização e modernização</li>
-                            <li className={`text-3xl list-disc my-8 cursor-pointer 
+                            <li className={`text-2xl sm:text-3xl md2:list-disc my-8 cursor-pointer text-center md:2:text-start underline sm:no-underline
                             ${selectedItem === 5 ? 'text-yellow-400' : ''}`}
                             onClick={() => handleImage(img12, 5)}>Instalação de iluminação</li>
                         </ul>
                     </div>
-                    <div>
-                        <img className={`w-[442px] h-[376px] rounded cursor-pointer
+                    <div className="mb-12">
+                        <img className={`w-[95vw] md2:w-[442px] h-[376px] rounded cursor-pointer
                         ${zoom ? 'w-[800px] border-2 border-solid border-white fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]' : ''}`}
                         onClick={handleZoom}
                         src={selectedImage} />
-                        <h2 className="text-center text-[23px] text-slate-300 font-pFont">Clique na imagem para vê-la completa</h2>
+                        <h2 className="text-center text-[23px] text-slate-300 font-pFont hidden md2:block">Clique na imagem para vê-la completa</h2>
                     </div>
                 </div>
             </div>

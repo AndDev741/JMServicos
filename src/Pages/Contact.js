@@ -1,5 +1,5 @@
 import { Element } from "react-scroll"
-import { Map, Marker, ZoomControl} from "pigeon-maps"
+import { Map, Marker, ZoomControl, twoFingerDragWarning} from "pigeon-maps"
 import {useForm, ValidationError} from '@formspree/react'
 import { useState } from "react"
 export default function Contact() {
@@ -16,25 +16,28 @@ export default function Contact() {
 
     return(
     <Element name="contact">
-    <div className="relative h-[100vh]">
-        <div className="absolute inset-0 bg-[url('./Assets/contactbg.png')] bg-cover h-[100vh] filter brightness-50"></div>
-        <div className="flex items-center justify-evenly h-[100vh] filter brightness-100">
-            <div className="">
-                <h2 className="text-white font-[600] mb-6 text-4xl text-center">Entre em contato conosco</h2>
-                <Map height={400} width={700} defaultCenter={[-16.681808, -49.275472]} defaultZoom={12} metaWheelZoom={true}>
-                    <Marker width={50} anchor={[-16.681808, -49.275472]} />
-                    <ZoomControl />
-                </Map>
-                <h2 className="text-white mb-6 text-3xl text-center">Atendemos em toda Goiânia e região <br /> metropolitana</h2>
+    <div className="relative lg:h-screen">
+        <div className="absolute inset-0 bg-[url('./Assets/contactbg.png')] bg-cover lg:h-screen filter brightness-50"></div>
+        <div className="flex flex-col lg:flex-row items-center justify-evenly lg:h-[100vh] filter brightness-100">
+            <div className="flex flex-col items-center">
+                <h2 className="text-white font-[600] mb-6 text-4xl text-center mt-8 lg:mt-0">Entre em contato conosco</h2>
+                <div className="flex items-center justify-center w-[95vw] h-[300px] md:w-[700px] md:h-[400px] mb-5 md:mb-0">
+                    <Map  defaultCenter={[-16.681808, -49.275472]} defaultZoom={12} metaWheelZoom={true}>
+                        <Marker width={50} anchor={[-16.681808, -49.275472]} />
+                        <ZoomControl />
+                        <twoFingerDragWarning/>
+                    </Map>
+                </div>
+                <h2 className="text-white mb-6 text-3xl text-center ">Atendemos em toda Goiânia e região metropolitana</h2>
             </div>
             <div>
                 <form onSubmit={(e) => {
                     handleSubmit(e);
                     handleFormReset();
                 }}
-                      className="w-[500px] h-[520px] rounded-[12px] bg-white mt-12">
-                    <div className="flex justify-end">
-                        <h2 className="font-pFont font-[600] text-[24px] m-3 mr-8">Nos mande um email</h2>
+                      className="w-[90vw]  md:w-[500px] md:h-[520px] rounded-[12px] bg-white mt-12 mb-12 lg:mb-0">
+                    <div className="flex justify-center md:justify-end">
+                        <h2 className="font-pFont font-[600] text-[24px] m-3 mr-8 ">Nos mande um email</h2>
                     </div>
                     <div className="font-pFont my-6">
                         <label 
@@ -44,7 +47,7 @@ export default function Contact() {
                         <br />
                         <input 
                         name="name"
-                        className="border-b-2 border-solid border-black w-[420px] mx-[30px]" 
+                        className="border-b-2 border-solid border-black w-[80vw] md:w-[420px] mx-[30px]" 
                         type='text' required
                         />
                         <ValidationError
@@ -59,7 +62,7 @@ export default function Contact() {
                         <br />
                         <input 
                         name="email"
-                        className="border-b-2 border-solid border-black w-[420px] mx-[30px]" 
+                        className="border-b-2 border-solid border-black w-[80vw] md:w-[420px] mx-[30px]" 
                         type='email' required
                         />
                         <ValidationError
@@ -74,7 +77,7 @@ export default function Contact() {
                         <br />
                         <input 
                         name="number"
-                        className="border-b-2 border-solid border-black w-[420px] mx-[30px]" 
+                        className="border-b-2 border-solid border-black w-[80vw] md:w-[420px] mx-[30px]" 
                         type='text' required
                         />
                         <ValidationError
@@ -91,7 +94,7 @@ export default function Contact() {
                         <div className="flex items-center">
                             <textarea
                             name="message"
-                            className="border-2 border-solid border-black w-[300px] max-w-[360px] h-[160px] max-h-[160px] ml-[30px]" 
+                            className="mb-4 md:mb-0 border-2 border-solid border-black w-[300px] max-w-[360px] h-[160px] max-h-[160px] ml-[30px]" 
                             type='text' required
                             />
                             <ValidationError
@@ -101,7 +104,7 @@ export default function Contact() {
                             <button
                             disabled={state.submitting}
                             type="submit" 
-                            className="bg-black text-white w-[150px] h-[50px] ml-[10px]">Enviar</button>
+                            className="bg-black text-white w-[150px] h-[50px] ml-[10px] mr-3 md:mr-0">Enviar</button>
                             {formSubmited && (
                                 <div className="text-[18px] ml-[30px] text-green-500">
                                     O Email foi enviado com sucesso! 
