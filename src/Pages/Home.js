@@ -45,12 +45,12 @@ export default function Home() {
     return(
         <div className="bg-[url('./Assets/backgroundIMG.png')] bg-cover ">
             <Element name='home'>
-            <div className="flex items-center p-8 text-white">
+            <div className="flex items-center pt-4 sm:p-8 text-white">
                 <img src={icon} />
-                <h1 className="text-5xl font-hFont font-[700]"><b>JM</b> <br /> Serviços Elétricos</h1>
+                <h1 className="text-4xl xs:text-5xl font-hFont font-[700]"><b>JM</b> <br /> Serviços Elétricos</h1>
             </div>
-            <div className="w-[950px] h-[144px] ml-4 mt-3 absolute">
-                <span className="font-hFont font-[700] tracking-wide leading-[4rem] text-white text-5xl"><b>{CurrentPhrase}</b></span>
+            <div className="w-[80vw] lg:w-[950px] h-[144px] ml-4 mt-3 absolute">
+                <span className="font-hFont font-[700] tracking-wide leading-[4rem] text-white text-4xl sm:text-5xl"><b>{CurrentPhrase}</b></span>
             </div>
             <WhatsPopUp/>
             </Element>
@@ -69,7 +69,7 @@ function WhatsPopUp() {
     }
 
     return(
-    <div className="flex items-center justify-end pr-4 py-[10vh]">
+    <div className="flex items-center justify-center md:justify-end pr-4 pt-[350px] sm:pt-[250px] lg:pt-[5%] pb-[5%]">
         <div className="w-[350px] h-[360px] rounded-[10px]">
             <div className="h-[73px] bg-[#3ACD49] rounded-t-[10px] text-white font-pFont">
                 <div className="flex items-center relative">
