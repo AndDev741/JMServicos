@@ -94,10 +94,10 @@ export default function Services() {
                  key={item.id}
                  content={
                         <div className={`flex flex-col items-center`}>
-                            <img className="filter brightness-100 rounded w-[433px] h-[262px] border-2 border-solid border-yellow-500"
+                            <img className="filter brightness-100 rounded w-[40vw] h-[260px] md2:w-[433px] md2:h-[262px] border-2 border-solid border-yellow-500"
                              src={item.img} alt={`Slide ${index}`} />
                             <h2 className="text-[#ffe23b] font-hFont font-[700] text-2xl text-center">{item.textH}</h2>
-                            <p className="w-[420px] text-white text-lg text-center">{item.textP}</p>
+                            <p className="w-[40vw] md2:w-[420px] text-white text-lg text-center">{item.textP}</p>
                         </div>
                  }
                  isActive={index === 0}>

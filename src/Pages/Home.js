@@ -70,26 +70,26 @@ function WhatsPopUp() {
 
     return(
     <div className="flex items-center justify-center md:justify-end pr-4 pt-[350px] sm:pt-[250px] lg:pt-[5%] pb-[5%]">
-        <div className="w-[350px] h-[360px] rounded-[10px]">
+        <div className="w-[90vw] sm:w-[450px] sm:h-[460px] md:w-[350px] md:h-[360px] rounded-[10px]">
             <div className="h-[73px] bg-[#3ACD49] rounded-t-[10px] text-white font-pFont">
-                <div className="flex items-center relative">
+                <div className="flex items-center relative text-xl sm:text-[16px]">
                     <img src={whatsIcon} />
                     <p className="mb-3">
-                        Whatsapp - Marcilon Eletricista <span className="absolute text-sm left-[83px] bottom-[18px]">
+                        Whatsapp - Marcilon Eletricista <span className=" absolute text-lg sm:text-sm left-[83px] bottom-[10px] sm:bottom-[18px]">
                             Online agora - {getToday(today)}</span></p>
                 </div>
             </div>
-            <div className="h-[287px] bg-white rounded-b-[10px] font-pFont">
+            <div className="h-[330px] sm:h-[320px] md:h-[287px] bg-white rounded-b-[10px] font-pFont">
                 <div className="flex items-center pt-4">
                     <img src={whatsIcon} />
-                    <div className="flex items-center w-[146px] h-[47px] rounded-[12px] bg-[#D9D9D9]">
+                    <div className="flex items-center w-[200px] h-[60px] text-xl sm:w-[170px] sm:h-[60px] sm:text-xl md:text-[16px] md:w-[146px] md:h-[47px] rounded-[12px] bg-[#D9D9D9]">
                         <p className="ml-4">Olá tudo bem?  </p>
                     </div>
                  </div>
-                 <div className="flex flex-col items-center ml-[80px] w-[248px] h-[170px] rounded-[12px] bg-[#D9D9D9]">
+                 <div className="flex flex-col items-center ml-[80px] w-[300px] text-xl h-[200px] sm:w-[288px] sm:h-[190px] sm:text-xl md:text-[16px] md:w-[248px] md:h-[170px] rounded-[12px] bg-[#D9D9D9]">
                         <p className="m-3">Entre em contato comigo por Whatsapp!</p>
                         <a href="https://wa.me/556294246306?text=Olá,%20gostaria%20De%20Fazer%20Um%20Orçamento" target='_blank'>
-                        <button className="w-[163px] py-2 rounded-[15px] bg-[#3acd49] text-white mr-[65px] hover:bg-[#32aa3e]">
+                        <button className="w-[163px] py-2 rounded-[15px] bg-[#3acd49] text-white mr-[85px] sm:mr-[65px] hover:bg-[#32aa3e]">
                         Iniciar Conversa</button></a>
                         <p className=" mt-3">Vamos fazer um orçamento?</p>
                 </div>

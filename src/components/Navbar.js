@@ -3,16 +3,6 @@ import { FaGripLines, FaHome, FaUserAlt, FaTools, FaToolbox, FaEnvelope } from '
 import { useState} from 'react'
 
 export default function Navbar() {
-        const [active, setActive] = useState(false)
-
-        function handleMenu() {
-                if (active === false) {
-                setActive(true)
-                } else {
-                    setActive(false)
-                }
-        }
-
     return(
         <div>
             <nav className="hidden md:block fixed right-1 text-white font-pFont mt-8 z-50">
@@ -52,7 +42,25 @@ export default function Navbar() {
                     className="mx-6 cursor-pointer">
                     Contato</Link>
                 </nav>
-                <div className='block md:hidden fixed right-0 text-4xl text-white font-pFont mt-5 mr-5 z-50 cursor-pointer w-[75px] mx-6'>
+                <MobileMenu />
+        </div>
+    )
+}
+
+function MobileMenu() {
+    const [active, setActive] = useState(false)
+
+    function handleMenu() {
+            if (active === false) {
+            setActive(true)
+            } else {
+                setActive(false)
+            }
+    }
+    return(
+        <>
+        <div className=''>
+                <div className='block md:hidden fixed right-0 text-4xl text-white font-pFont mt-5 z-50 cursor-pointer'>
                     <FaGripLines
                     onClick={handleMenu}
                     className=' '/> 
@@ -92,5 +100,6 @@ export default function Navbar() {
                     className="mx-6 cursor-pointer"><FaEnvelope /></Link>
                 </nav>
         </div>
+        </>
     )
 }
