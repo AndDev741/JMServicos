@@ -47,7 +47,7 @@ export default function Contact() {
                         <br />
                         <input 
                         name="name"
-                        className="border-b-2 border-solid border-black w-[80vw] md:w-[420px] mx-[30px]" 
+                        className="border-b-2 border-solid border-black w-[80vw] md:w-[420px] ml-[30px] md:mx-[30px]" 
                         type='text' required
                         />
                         <ValidationError
@@ -62,7 +62,7 @@ export default function Contact() {
                         <br />
                         <input 
                         name="email"
-                        className="border-b-2 border-solid border-black w-[80vw] md:w-[420px] mx-[30px]" 
+                        className="border-b-2 border-solid border-black w-[80vw] md:w-[420px] ml-[30px] md:mx-[30px]" 
                         type='email' required
                         />
                         <ValidationError
@@ -77,7 +77,7 @@ export default function Contact() {
                         <br />
                         <input 
                         name="number"
-                        className="border-b-2 border-solid border-black w-[80vw] md:w-[420px] mx-[30px]" 
+                        className="border-b-2 border-solid border-black w-[80vw] md:w-[420px] ml-[30px] md:mx-[30px]" 
                         type='text' required
                         />
                         <ValidationError

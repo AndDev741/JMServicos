@@ -83,28 +83,28 @@ function Clients() {
             <h1 className="text-center text-[30px] font-hFont font-[900] py-4">Algumas de nossas obras de arte</h1>
             <div className="flex justify-evenly flex-wrap">
                 <img src={img1}
-                 className='w-[380px] hover:scale-110 h-[350px] rounded mx-2 my-3'/>
+                 className='w-[80vw] md:w-[380px] hover:scale-110 h-[350px] rounded mx-2 my-3'/>
                 <img src={img2}
-                 className='w-[380px] hover:scale-110 h-[350px] rounded mx-2 my-3'/>
+                 className='w-[80vw] md:w-[380px] hover:scale-110 h-[350px] rounded mx-2 my-3'/>
                 <img src={img3}
-                 className='w-[380px] hover:scale-110 h-[350px] rounded mx-2 my-3'/>
+                 className='w-[80vw] md:w-[380px] hover:scale-110 h-[350px] rounded mx-2 my-3'/>
                 
                 <img src={img6}
-                 className='w-[600px] hover:scale-105 rounded mx-2 my-3'/>
+                 className='w-[80vw] md:w-[600px] hover:scale-105 rounded mx-2 my-3'/>
                 <img src={img7}
-                 className='w-[600px] hover:scale-105 rounded mx-2 my-3'/>
+                 className='w-[80vw] md:w-[600px] hover:scale-105 rounded mx-2 my-3'/>
 
                 <img src={img8}
-                 className='w-[380px] hover:scale-110 h-[350px] rounded mx-2 my-3'/>
+                 className='w-[80vw] md:w-[380px] hover:scale-110 h-[350px] rounded mx-2 my-3'/>
                 <img src={img9}
-                 className='w-[380px] hover:scale-110 h-[350px] rounded mx-2 my-3'/>
+                 className='w-[80vw] md:w-[380px] hover:scale-110 h-[350px] rounded mx-2 my-3'/>
                 <img src={img10}
-                 className='w-[380px] hover:scale-110 h-[350px] rounded mx-2 my-3'/>
+                 className='w-[80vw] md:w-[380px] hover:scale-110 h-[350px] rounded mx-2 my-3'/>
 
                 <img src={img15}
-                 className='w-[600px] hover:scale-105 rounded mx-2 my-3'/>
+                 className='w-[80vw] md:w-[600px] hover:scale-105 rounded mx-2 my-3'/>
                 <img src={img16}
-                 className='w-[600px] hover:scale-105 rounded mx-2 my-3'/>
+                 className='w-[80vw] md:w-[600px] hover:scale-105 rounded mx-2 my-3'/>
             </div> 
         </div>
     )

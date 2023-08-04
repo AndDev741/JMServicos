@@ -1,6 +1,6 @@
 export default function ServicesNavigation({ itemCount, currentIndex, handleClick }) {
     return(
-        <div className="flex justify-center items-center absolute left-[44%] top-[28%]">
+        <div className="flex justify-center items-center md:absolute left-[50vw] right-[50vw] top-[22vh]">
             {Array.from({length: itemCount}, (_, index) => (
                 <div
                 key={index}

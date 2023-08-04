@@ -82,22 +82,22 @@ export default function Services() {
 
     return(
     <Element name='services'>
-        <div className="relative h-[100vh]">
-            <div className="absolute inset-0 bg-[url('./Assets/ServicesBG.png')] bg-cover h-[100vh] filter brightness-50"></div>
+        <div className="relative pb-[5%]">
+            <div className="absolute inset-0 bg-[url('./Assets/ServicesBG.png')] bg-cover filter brightness-50"></div>
              <div className="filter brightness-100">
                 <div className="relative z-10 flex justify-center pt-[16vh]">
-                    <h1 className="text-white text-5xl font-hFont font-[700]">Tipos de serviços que fazemos</h1>
+                    <h1 className="text-white text-5xl font-hFont text-center font-[700]">Tipos de serviços que fazemos</h1>
                 </div>
-                <div className="flex justify-evenly mt-[60px]">
+                <div className="flex flex-col md:flex-row justify-evenly mt-[60px]">
                 {slides.slice(currentIndex, currentIndex + 2).map((item, index) => (
                 <ServicesItem
                  key={item.id}
                  content={
                         <div className={`flex flex-col items-center`}>
-                            <img className="filter brightness-100 rounded w-[40vw] h-[260px] md2:w-[433px] md2:h-[262px] border-2 border-solid border-yellow-500"
+                            <img className="filter brightness-100 rounded w-[80vw] h-[260px] md:w-[400px] md:h-[262px] border-2 border-solid border-yellow-500"
                              src={item.img} alt={`Slide ${index}`} />
                             <h2 className="text-[#ffe23b] font-hFont font-[700] text-2xl text-center">{item.textH}</h2>
-                            <p className="w-[40vw] md2:w-[420px] text-white text-lg text-center">{item.textP}</p>
+                            <p className="w-[70vw] mb-8 md2:mb-0 md:w-[400px] text-white text-lg text-center">{item.textP}</p>
                         </div>
                  }
                  isActive={index === 0}>

@@ -4,11 +4,11 @@ export default function About() {
     return(
         <div className="bg-[#463A3A] text-white">
             <Element name="about">
-            <div className="flex flex-col md:flex-row items-center justify-evenly">
+            <div className="flex flex-col md:flex-row items-center md:justify-evenly">
                 <div className="">
                     <img src={AboutPic} className="hidden md:block"/>
                 </div>
-                <div className="mt-[20%] md:mt-0 mb-[20%] md:mt-0">
+                <div className="mt-[20%] mb-[20%] md:mt-[10%] md:mb-[10%]">
                     <h1 className="text-6xl text-center mb-8">Sobre <br /> a <b>JM Serviços</b></h1>
                     <p className="w-[90vw] md:w-[600px] text-xl text-center font-pFont">Somos uma empresa especializada em serviços elétricos residenciais e comerciais 
                                 em Goiânia, oferecendo soluções completas em manutenção, reformas e instalações elétricas. Com uma equipe 
