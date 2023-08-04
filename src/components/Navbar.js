@@ -3,6 +3,16 @@ import { FaGripLines, FaHome, FaUserAlt, FaTools, FaToolbox, FaEnvelope } from '
 import { useState} from 'react'
 
 export default function Navbar() {
+        const [active, setActive] = useState(false)
+
+        function handleMenu() {
+                if (active === false) {
+                setActive(true)
+                } else {
+                    setActive(false)
+                }
+        }
+
     return(
         <div>
             <nav className="hidden md:block fixed right-1 text-white font-pFont mt-8 z-50">
@@ -42,25 +52,7 @@ export default function Navbar() {
                     className="mx-6 cursor-pointer">
                     Contato</Link>
                 </nav>
-                <MobileMenu />
-        </div>
-    )
-}
-
-function MobileMenu() {
-    const [active, setActive] = useState(false)
-
-    function handleMenu() {
-            if (active === false) {
-            setActive(true)
-            } else {
-                setActive(false)
-            }
-    }
-    return(
-        <>
-        <div className=''>
-                <div className='block md:hidden fixed right-0 text-4xl text-white font-pFont mt-5 z-50 cursor-pointer'>
+                <div className='block md:hidden fixed right-0 text-4xl text-white font-pFont mt-5 z-50 cursor-pointer mx-3'>
                     <FaGripLines
                     onClick={handleMenu}
                     className=' '/> 
@@ -73,33 +65,32 @@ function MobileMenu() {
                     smooth='on' 
                     activeClass='text-yellow-500 
                     underline'
-                    className={`mx-6 cursor-pointer`}><FaHome className='' /></Link>
+                    className={`mx-3  cursor-pointer`}><FaHome className='' /></Link>
                     <Link 
                     to='about' 
                     spy={true} 
                     smooth='on' 
-                    activeClass='text-yellow-500 underline'
-                    className={`mx-6 cursor-pointer `}><FaUserAlt /></Link>
+                    activeClass='mx-3 text-yellow-500 underline'
+                    className={`cursor-pointer `}><FaUserAlt /></Link>
                     <Link 
                     to='services'
                     spy={true} 
                     smooth='on' 
                     activeClass='text-yellow-500 underline'
-                    className="mx-6 cursor-pointer"><FaTools /></Link>
+                    className="mx-3 cursor-pointer"><FaTools /></Link>
                     <Link 
                     to='projects'
                     spy={true}
                     smooth='on'
                     activeClass='text-yellow-500 underline'
-                    className="mx-6 cursor-pointer"><FaToolbox /></Link>
+                    className="mx-3 cursor-pointer"><FaToolbox /></Link>
                     <Link 
                     to='contact'
                     smooth='on'
                     spy={true}
                     activeClass='text-yellow-500 underline'
-                    className="mx-6 cursor-pointer"><FaEnvelope /></Link>
+                    className="mx-3 cursor-pointer"><FaEnvelope /></Link>
                 </nav>
         </div>
-        </>
     )
 }

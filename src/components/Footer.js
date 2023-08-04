@@ -8,11 +8,12 @@ export default function Footer(){
                     <p className='text-center text-white'>Nosso número: 62994246306</p>
                 </div>
                 <div className="flex flex-col items-center">
-                    <h2 className="text-center text-white">Sigam-nos no Instagram</h2>
-                    <FaInstagram className='text-[40px] text-yellow-500'/>
+                    <h2 className="text-center text-white ">Sigam-nos no Instagram</h2>
+                    <a href='https://www.instagram.com/jmservicoseletricos_17/' target='_blank'>
+                    <FaInstagram className='text-[40px] text-yellow-500 cursor-pointer'/></a> 
                 </div>
                 <div>
-                    <h2 className="text-center text-white">Website feito por André Luiz - Web Developer <br />
+                    <h2 className="text-center text-white hidden sm:block">Website feito por André Luiz - Web Developer <br />
                         Veja o meu Portfolio</h2>
                 </div>
             </div>
