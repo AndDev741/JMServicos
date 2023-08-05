@@ -82,16 +82,16 @@ function WhatsPopUp() {
             <div className="h-[330px] sm:h-[320px] md:h-[287px] bg-white rounded-b-[10px] font-pFont">
                 <div className="flex items-center pt-4">
                     <img src={whatsIcon} />
-                    <div className="flex items-center w-[50vw] h-[60px] text-xl sm:w-[170px] sm:h-[60px] sm:text-xl md:text-[16px] md:w-[146px] md:h-[47px] rounded-[12px] bg-[#D9D9D9]">
+                    <div className="flex items-center w-[50vw] h-[60px] text-[16px] sm:w-[170px] sm:h-[60px] sm:text-xl md:text-[16px] md:w-[146px] md:h-[47px] rounded-[12px] bg-[#D9D9D9]">
                         <p className="ml-4">Olá tudo bem?  </p>
                     </div>
                  </div>
-                 <div className="flex flex-col items-center ml-[80px] w-[65vw] text-xl h-[200px] sm:w-[288px] sm:h-[190px] sm:text-xl md:text-[16px] md:w-[248px] md:h-[170px] rounded-[12px] bg-[#D9D9D9]">
+                 <div className="flex flex-col items-center ml-[80px] w-[65vw] text-[16px] h-[200px] sm:w-[288px] sm:h-[190px] sm:text-xl md:text-[16px] md:w-[248px] md:h-[170px] rounded-[12px] bg-[#D9D9D9]">
                         <p className="m-3">Entre em contato comigo por Whatsapp!</p>
                         <a href="https://wa.me/556294246306?text=Olá,%20gostaria%20De%20Fazer%20Um%20Orçamento" target='_blank'>
-                        <button className="w-[163px] py-2 rounded-[15px] bg-[#3acd49] text-white mr-[85px] sm:mr-[65px] hover:bg-[#32aa3e]">
+                        <button className="w-[163px] py-2 rounded-[15px] bg-[#3acd49] text-white mr-[10vw] sm:mr-[65px] hover:bg-[#32aa3e]">
                         Iniciar Conversa</button></a>
-                        <p className=" mt-3">Vamos fazer um orçamento?</p>
+                        <p className="m-3">Vamos fazer um orçamento?</p>
                 </div>
             </div>
         </div>
