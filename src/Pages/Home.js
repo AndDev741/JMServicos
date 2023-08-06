@@ -72,10 +72,10 @@ function WhatsPopUp() {
     <div className="flex items-center justify-center md:justify-end pr-4 pt-[350px] sm:pt-[250px] lg:pt-[5%] pb-[5%]">
         <div className="w-[90vw] sm:w-[450px] sm:h-[460px] md:w-[350px] md:h-[360px] rounded-[10px]">
             <div className="h-[73px] bg-[#3ACD49] rounded-t-[10px] text-white font-pFont">
-                <div className="flex items-center relative text-sm sm:text-xl sm:text-[16px]">
+                <div className="flex items-center relative text-sm sm:text-lg">
                     <img src={whatsIcon} />
                     <p className="mb-3">
-                        Whatsapp - Marcilon Eletricista <span className=" absolute text-sm sm:text-lg sm:text-sm left-[83px] bottom-[10px] sm:bottom-[18px]">
+                        Whatsapp - Marcilon Eletricista <span className=" absolute text-sm sm:text-[14px] left-[83px] bottom-[10px] sm:bottom-[18px]">
                             Online agora - {getToday(today)}</span></p>
                 </div>
             </div>
