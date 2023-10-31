@@ -13,8 +13,8 @@ export default function Footer(){
                     <FaInstagram className='text-[40px] text-yellow-500 cursor-pointer'/></a> 
                 </div>
                 <div>
-                    <h2 className="text-center text-white hidden sm:block">Website feito por André Luiz - Web Developer <br />
-                        Veja o meu Portfolio</h2>
+                    <a href='https://andre-luiz-web-dev.vercel.app/' target={'_blank'} rel='noreferrer'><h2 className="text-center text-white hidden sm:block">Website feito por André Luiz - Web Developer <br />
+                        Veja o meu Portfolio</h2></a>
                 </div>
             </div>
         </>
